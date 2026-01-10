@@ -53,3 +53,4 @@ void bubble(struct xuesheng xs[],int n)
 		}
 	}
 }
+
