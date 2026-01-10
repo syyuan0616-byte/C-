@@ -9,7 +9,8 @@ void bubble(struct xuesheng xs[],int n);
 int main()
 {
 	int n;
-	scanf("%d",n);
+	scanf("%d",&n);
+	getchar();
 	struct xuesheng xs[100];
 	for(int i=0;i<n;i++)
 	{
@@ -18,16 +19,15 @@ int main()
 		for(j=0;j<30;j++)
 		{
 			scanf("%c",&a);
-			printf("3\n");
 			if(a==',') break;
 			else xs[i].name[j]=a;
 		}
-		xs[i].name[j+1]='\0';
+		xs[i].name[j]='\0';
+		printf("n %s\n",xs[0].name);
 		scanf("%d",&xs[i].score);
-		printf("2\n");
+		printf("s %d\n",xs[i].score);
 		getchar();
 	}
-	printf("1\n");
 	bubble(xs,n);
 	for(int i=0;i<n;i++)
 	{
